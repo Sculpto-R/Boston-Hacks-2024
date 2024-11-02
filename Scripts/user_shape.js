@@ -12,6 +12,7 @@ drawing_board.style.position = "absolute";
 
 document.body.append(drawing_board)
 
+//add some code to link an eventListener to a button to reactivate the eventListener for  the drawing board
 points = [] //just has a list of points as the object
 lines = [] //has tuples of three values: The line object, and the two point objects
 
