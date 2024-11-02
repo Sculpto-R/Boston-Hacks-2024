@@ -2,7 +2,7 @@ const drawing_board = document.createElement('div')
 
 
 drawing_board.style.paddingLeft = "100px"
-drawing_board.style.paddingRight = "100px"
+drawing_board.style.paddingRight = "100px" //default settings
 drawing_board.style.paddingUp = "100px"
 drawing_board.style.paddingDown = "100px"
 drawing_board.style.backgroundColor = "beige";
