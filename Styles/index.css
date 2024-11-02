@@ -1,0 +1,32 @@
+html {
+    scroll-behavior: initial;
+    overflow: hidden;
+}
+
+html, body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    height: 64px;    
+    -webkit-backdrop-filter: blur(10px);
+    background: hsla(15, 46%, 10%, 0.363);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.body-content {
+    margin-top: 80px;
+}
