@@ -9,10 +9,13 @@
     <link rel="stylesheet" href="Styles/index.css">
 </head>
 <body>
+    <div id="canvas3d" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;"></div>
+    
     <div class="header">
         <img src="Logo.png" class="top_s" style="margin-right: 10px; vertical-align: middle;">
         Shape Identifier AI
     </div>
+    <div class="line"></div>
     <div class="centered-section">
         <p>Identify any shape with the following options:</p>
     </div>       
@@ -24,7 +27,6 @@
         </div>
         <div class="tab-content">
             <div id="draw-shape" class="tab-section">
-                <!-- Content for drawing shape -->
                 <h2>Draw a Shape</h2>
                 <p>Here you can draw your shape!</p>
             </div>
@@ -37,7 +39,6 @@
                 </div>
             </div>           
             <div id="import-json" class="tab-section" style="display: none;">
-                <!-- Content for importing JSON -->
                 <h2>Import JSON</h2>
                 <p>Paste your JSON data here!</p>
             </div>
@@ -61,18 +62,20 @@
     <script src="Scripts/scrollbar.js"></script>
     <script src="Scripts/particles.js"></script>
     <script src="Scripts/main.js"></script>
+    <script src="https://cdn.spline.design/runtime.js"></script>
     <script>
         function showTab(tabId) {
-            // Hide all tab sections
             const sections = document.querySelectorAll('.tab-section');
             sections.forEach(section => section.style.display = 'none');
-
-            // Show the selected tab section
             document.getElementById(tabId).style.display = 'block';
         }
 
-        // Show the first tab by default
         showTab('draw-shape');
+
+        // Initialize Spline
+        const canvas = document.getElementById('canvas3d');
+        const app = new Application(canvas);
+        app.load('https://prod.spline.design/N8m0Fndx-nLq71Y9/scene.splinecode');
     </script>
 </body>
 </html>
