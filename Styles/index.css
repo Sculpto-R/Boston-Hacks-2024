@@ -15,6 +15,10 @@ html, body {
     animation: AnimationName 18s ease infinite;
 }
 
+title {
+    font-weight: bold;
+}
+
 @-webkit-keyframes AnimationName {
     0%{background-position:0% 74%}
     50%{background-position:100% 27%}
@@ -54,8 +58,57 @@ body {
     font-size: 16px;
     font-weight: 400;
     -webkit-backdrop-filter: blur(3px);
-    color: #ffffff;
+    color: #fff;
 }
+
+
+.tab-container {
+    margin-top: 20px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    background-color: #48aa52; /* Default color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0 10px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.tab-button:hover {
+    background-color: #3a8a4a; /* Hover color */
+}
+
+.tab-button.active {
+    background-color: #367a3d; /* Darker color when active */
+}
+
+.tab-content {
+    text-align: center;
+}
+
+#imagePreview {
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    margin-top: 20px; /* Adjust spacing above */
+}
+
+#preview {
+    max-width: 100%; /* Make sure the image is responsive */
+    height: auto; /* Maintain aspect ratio */
+    display: none; /* Hide initially */
+    margin: 0; /* Reset margin */
+}
+
+
 
 #particles-js {
     position: fixed;
@@ -70,6 +123,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 .about-header {
     padding-top: 50px;
@@ -80,15 +134,18 @@ body {
     padding-bottom: 20px;
     font-size: 20px;
     text-align: center;
+    align-items: center;
 }
 .line {
     width: 180px;
     height: 2px;
     background-color: white;
     margin: 10px 0;
+    align-items: center;
 }
-.info-section a {
-    margin: 0 10px; /* Optional: Add horizontal margin for spacing */
+.social-links {
+    display: flex;
+    align-items: center; /* Center items horizontally */
 }
 
 .shape-drawing-section {
