@@ -62,7 +62,18 @@ function addLine(p1,p2){
 
 function finishShapeSimple(){
     addLine(points[0],points[points.length - 1])
-    drawing_board.removeEventListener('mouseup',savePoint)
+    //drawing_board.removeEventListener('mouseup',savePoint)
+
+    //add code to transform DOM tree into image
+
+    for (let i = 0; i<points.length; i++){
+        points[i].remove()
+    }
+    points = []
+    for (let i = 0; i <lines.length; i++){
+        lines[i][0].remove()
+    }
+    lines = []
 }
 
 //call this function to make a line from the last point added to the first point added. This will finish the shape.
@@ -177,6 +188,8 @@ function findMidpoint(p1_coordinates,p2_coordinates){
     return [(x1+x2)/2,(y1+y2)/2]
 }
 
+
+//calculates the angle between 2 points with a point in between acting as vertex
 function calculateAngle(previous_p,current_p,after_p) {
     let x1 = previous_p[0]
     let y1 = previous_p[1]
@@ -186,26 +199,26 @@ function calculateAngle(previous_p,current_p,after_p) {
 
     let x3 = after_p[0]
     let y3 = after_p[1]
-    // Step 1: Create vectors AB and BC
+    //Create vectors AB and BC
     const ABx = x2 - x1;
     const ABy = y2 - y1;
     const BCx = x3 - x2;
     const BCy = y3 - y2;
 
-    // Step 2: Calculate the dot product of AB and BC
+    //Calculate the dot product of AB and BC
     const dotProduct = ABx * BCx + ABy * BCy;
 
-    // Step 3: Calculate the magnitudes of AB and BC
+    //Calculate the magnitudes of AB and BC
     const magnitudeAB = Math.sqrt(ABx * ABx + ABy * ABy);
     const magnitudeBC = Math.sqrt(BCx * BCx + BCy * BCy);
 
-    // Step 4: Calculate the cosine of the angle
+    //Calculate the cosine of the angle
     const cosTheta = dotProduct / (magnitudeAB * magnitudeBC);
 
-    // Step 5: Calculate the angle in radians
+    //Calculate the angle in radians
     const angleRadians = Math.acos(cosTheta);
 
-    // Convert the angle to degrees (optional)
+    // Convert the angle to degrees
     const angleDegrees = angleRadians * (180 / Math.PI);
 
     return angleDegrees; // Returns the angle in degrees
@@ -226,13 +239,13 @@ function calculateLinearEquation(p1_coordinates,p2_coordinates) {
         return null; // Undefined slope, line is vertical
     }
     
-    // Step 1: Calculate the slope (m)
+    //Calculate the slope (m)
     const m = (y2 - y1) / (x2 - x1);
 
-    // Step 2: Calculate the y-intercept (b) using one of the points
+    //Calculate the y-intercept (b) using one of the points
     const b = y1 - m * x1;
 
-    // Step 3: Return the equation in slope-intercept form y = mx + b
+    //Return the equation in slope-intercept form y = mx + b
     return [m,b];
 }
 
