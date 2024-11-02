@@ -65,7 +65,7 @@ body {
     font-size: 16px;
     font-weight: 400;
     -webkit-backdrop-filter: blur(3px);
-    color: #fff;
+    color: #ffffff;
 }
 
 #particles-js {
@@ -73,7 +73,7 @@ body {
     height: 100%;
     width:100%;
     background: rgba(255, 0, 0, 0);
-    z-index:-1;
+    z-index: -1;
 }
 
 .info-section {
@@ -82,27 +82,22 @@ body {
     flex-direction: column;
     align-items: center;
 }
-
 .about-header {
     padding-top: 50px;
     font-size: 32px;
 }
-
 .about-text {
     padding-top: 20px;
     padding-bottom: 20px;
     font-size: 20px;
     text-align: center;
 }
-
-
 .line {
     width: 180px;
     height: 2px;
     background-color: white;
     margin: 10px 0;
 }
-
 
 .shape-drawing-section {
     margin-top: 80px;
@@ -114,7 +109,9 @@ body {
     transition: transform 0.3s;
     fill: #48aa52
 }
-
 .logo:hover {
     transform: scale(1.1);
 }
+
+
+
