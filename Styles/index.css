@@ -6,34 +6,34 @@ html {
 }
 
 html, body {
-    background: linear-gradient(270deg, #760000, #000000);
-    background-size: 400% 400%;
+    background: linear-gradient(147deg, #000000, #d90000, #b00000);
+    background-size: 600% 600%;
 
-    -webkit-animation: AnimationName 22s ease infinite;
-    -moz-animation: AnimationName 22s ease infinite;
-    -o-animation: AnimationName 22s ease infinite;
-    animation: AnimationName 22s ease infinite;
+    -webkit-animation: AnimationName 18s ease infinite;
+    -moz-animation: AnimationName 18s ease infinite;
+    -o-animation: AnimationName 18s ease infinite;
+    animation: AnimationName 18s ease infinite;
 }
 
 @-webkit-keyframes AnimationName {
-    0%{background-position:88% 0%}
-    50%{background-position:13% 100%}
-    100%{background-position:88% 0%}
+    0%{background-position:0% 74%}
+    50%{background-position:100% 27%}
+    100%{background-position:0% 74%}
 }
 @-moz-keyframes AnimationName {
-    0%{background-position:88% 0%}
-    50%{background-position:13% 100%}
-    100%{background-position:88% 0%}
+    0%{background-position:0% 74%}
+    50%{background-position:100% 27%}
+    100%{background-position:0% 74%}
 }
 @-o-keyframes AnimationName {
-    0%{background-position:88% 0%}
-    50%{background-position:13% 100%}
-    100%{background-position:88% 0%}
+    0%{background-position:0% 74%}
+    50%{background-position:100% 27%}
+    100%{background-position:0% 74%}
 }
 @keyframes AnimationName {
-    0%{background-position:88% 0%}
-    50%{background-position:13% 100%}
-    100%{background-position:88% 0%}
+    0%{background-position:0% 74%}
+    50%{background-position:100% 27%}
+    100%{background-position:0% 74%}
 }
 
 .header {
@@ -41,9 +41,6 @@ html, body {
     color: #48aa52;
     top: 0;
     z-index: 1;
-    height: 64px;    
-    -webkit-backdrop-filter: blur(10px);
-    background: hsla(15, 46%, 10%, 0.363);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -52,7 +49,7 @@ html, body {
 
 
 body {
-    padding-top: 100px;
+    padding-top: 10px;
     font-family: Prompt;
     font-size: 16px;
     font-weight: 400;
@@ -89,6 +86,9 @@ body {
     height: 2px;
     background-color: white;
     margin: 10px 0;
+}
+.info-section a {
+    margin: 0 10px; /* Optional: Add horizontal margin for spacing */
 }
 
 .shape-drawing-section {
