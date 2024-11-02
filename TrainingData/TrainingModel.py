@@ -66,3 +66,5 @@ for epoch in range(num_epochs):
     # Print the average loss for this epoch
     print(f"Epoch {epoch+1}/{num_epochs}, Loss: {running_loss / len(data_loader):.4f}")
 
+    torch.save(model.state_dict(), f"cnn_model_epoch_{epoch+1}.pth")
+
