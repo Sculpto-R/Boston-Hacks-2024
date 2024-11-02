@@ -14,37 +14,62 @@
         AI Shape Identifier
     </div>
     <div class="tab-container">
-        <div class="shape-drawing-tab">
-            
+        <div class="tabs">
+            <button class="tab-button" onclick="showTab('draw-shape')">Draw Shape</button>
+            <button class="tab-button" onclick="showTab('import-image')">Import Image</button>
+            <button class="tab-button" onclick="showTab('import-json')">Import JSON</button>
         </div>
-        <div class="import-image-tab">
-            
-        </div>
-        <div class="json_section">
-            
+        <div class="tab-content">
+            <div id="draw-shape" class="tab-section">
+                <!-- Content for drawing shape -->
+                <h2>Draw a Shape</h2>
+                <p>Here you can draw your shape!</p>
+            </div>
+            <div id="import-image" class="tab-section" style="display: none;">
+                <h2>Import an Image</h2>
+                <p>Upload your image here!</p>
+                <input type="file" id="imageInput" accept="image/*" onchange="previewImage(event)">
+                <div id="imagePreview" style="margin-top: 20px; text-align: center;">
+                    <img id="preview" src="" alt="Image Preview" style="display: none; max-width: 100%; height: auto; margin: auto;">
+                </div>
+            </div>           
+            <div id="import-json" class="tab-section" style="display: none;">
+                <!-- Content for importing JSON -->
+                <h2>Import JSON</h2>
+                <p>Paste your JSON data here!</p>
+            </div>
         </div>
     </div>
     <div class="info-section">
-        <h class="about-header">
-            About
-        </h>
+        <h2 class="about-header">ABOUT</h2>
         <div class="line"></div>
-        <h class="about-text">
-            This is a project for the 2024 Boston Hacks Hackathon.
-        </h>
-        <a href="https://www.bostonhacks.org/" target="_blank">
-            <img class="logo" src="https://www.bostonhacks.org/_next/static/media/bhacks-logo.3440815c.svg" alt="BHacks Logo">
-        </a>
-        <a href="https://github.com/Sculpto-R/Boston-Hacks-2024" target="_blank">
-            <img class="logo" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ficon-library.com%2Fimages%2Fgithub-icon-white%2Fgithub-icon-white-6.jpg&f=1&nofb=1&ipt=f2e904673b788a331918965f0851d2e2a496459f9a24a3e51fef8a044c68c2a0&ipo=images" alt="GitHub Logo">
-        </a>
-        
+        <h3 class="about-text">This is a project for the 2024 Boston Hacks Hackathon.</h3>
+        <div class="social-links">
+            <a href="https://www.bostonhacks.org/" target="_blank">
+                <img class="logo" src="https://www.bostonhacks.org/_next/static/media/bhacks-logo.3440815c.svg" alt="BHacks Logo">
+            </a>
+            <a href="https://github.com/Sculpto-R/Boston-Hacks-2024" target="_blank">
+                <img class="logo" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ficon-library.com%2Fimages%2Fgithub-icon-white%2Fgithub-icon-white-6.jpg&f=1&nofb=1&ipt=f2e904673b788a331918965f0851d2e2a496459f9a24a3e51fef8a044c68c2a0&ipo=images" alt="GitHub Logo">
+            </a>
+        </div>
     </div>
     <script src="Scripts/smooth-scroll.js"></script>
+    <script src="Scripts/import-image.js"></script>
     <script src="Scripts/scrollbar.js"></script>
     <script src="Scripts/particles.js"></script>
+    <script src="Scripts/main.js"></script>
+    <script>
+        function showTab(tabId) {
+            // Hide all tab sections
+            const sections = document.querySelectorAll('.tab-section');
+            sections.forEach(section => section.style.display = 'none');
+
+            // Show the selected tab section
+            document.getElementById(tabId).style.display = 'block';
+        }
+
+        // Show the first tab by default
+        showTab('draw-shape');
+    </script>
 </body>
 </html>
-
-
-
