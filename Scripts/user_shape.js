@@ -1,3 +1,5 @@
+import domtoimage from 'dom-to-image';
+
 const drawing_board = document.createElement('div')
 
 
@@ -65,6 +67,10 @@ function finishShapeSimple(){
     //drawing_board.removeEventListener('mouseup',savePoint)
 
     //add code to transform DOM tree into image
+    domtoimage.toBlob(container)
+    .then(function (blob) {
+        window.saveAs(blob, 'my-node.png');
+    });
 
     for (let i = 0; i<points.length; i++){
         points[i].remove()
