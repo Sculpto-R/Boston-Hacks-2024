@@ -76,9 +76,32 @@ body {
     z-index:-1;
 }
 
+.info-section {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-header {
+    padding-top: 50px;
+    font-size: 32px;
+}
+
+.about-text {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    text-align: center;
+}
 
 
-
+.line {
+    width: 180px;
+    height: 2px;
+    background-color: white;
+    margin: 10px 0;
+}
 
 
 .shape-drawing-section {
@@ -88,10 +111,10 @@ body {
 .logo {
     width: 80px;
     height: 80px;
-    transition: transform 0.3s; /* Smooth transition for scaling */
+    transition: transform 0.3s;
     fill: #48aa52
 }
 
 .logo:hover {
-    transform: scale(1.1); /* Scale up on hover */
+    transform: scale(1.1);
 }
