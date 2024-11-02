@@ -59,6 +59,10 @@ function addLine(p1,p2){
     lines.push([line,p1,p2]) 
 }
 
+function finishShapeSimple(){
+    addLine(points[0],points[points.length - 1])
+    drawing_board.removeEventListener('mouseup',savePoint)
+}
 
 //call this function to make a line from the last point added to the first point added. This will finish the shape.
 function finishShape(){
