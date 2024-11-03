@@ -18,8 +18,8 @@ var lines = [] //has tuples of three values: The line object, and the two point 
 //this is called to create a point at the position of the mouse. It then adds a line to any subsequent points unless it is the first point ever in points.
 function savePoint(e){
     console.log("save point is being referenced")
-    mouseX = e.clientX
-    mouseY = e.clientY
+    const mouseX = e.clientX
+    const mouseY = e.clientY
     const tempPoint = document.createElement('div')
     tempPoint.style.top = mouseY + "px"
     tempPoint.style.left = mouseX + "px"
@@ -40,11 +40,11 @@ function savePoint(e){
 
 //add a line between any two points
 function addLine(p1,p2){
-    x1 = p1.style.left
-    y1 = p1.style.top
+    const x1 = p1.style.left
+    const y1 = p1.style.top
     
-    x2 = p2.style.left
-    y2 = p2.style.top
+    const x2 = p2.style.left
+    const y2 = p2.style.top
 
     const distance = Math.hypot(x2 - x1, y2 - y1); //distance between the two points.
     const angle = Math.atan2(y2 - y1, x2 - x1)  * (180 / Math.PI); //gets angle between two points
