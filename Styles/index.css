@@ -158,6 +158,14 @@ body {
     margin-top: 80px;
 }
 
+#jsondata {
+    width: 50%;       /* Full width for the input box */
+    height: 150px;     /* Height adjustment */
+    padding: 10px;     /* Add padding for better readability */
+    font-size: 16px;   /* Adjust font size */
+    resize: vertical;  /* Allow vertical resizing */
+}
+
 .logo {
     width: 80px;
     height: 80px;
