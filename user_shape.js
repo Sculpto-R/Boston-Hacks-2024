@@ -37,6 +37,7 @@ function savePoint(e){
     tempPoint.backgroundColor = "black"
     tempPoint.position = "absolute"
     document.body.append(tempPoint)
+    console.log(tempPoint.style.zIndex)
 
     if (points.length == 0){
         console.log("pass over")
@@ -44,6 +45,8 @@ function savePoint(e){
     else addLine(tempPoint,points[points.length-1])
 
     points.push(tempPoint)
+    console.log(drawing_board.style.zIndex)
+    console.log(tempPoint.style.zIndex)
 }
 
 //add a line between any two points
