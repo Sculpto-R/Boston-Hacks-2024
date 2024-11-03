@@ -34,16 +34,23 @@
             
             <div id="import-image" class="tab-section" style="display: none;">
                 <h2>Import an Image</h2>
-                <p>Upload your image here!</p>
-                    <input type="file" id="imageInput" accept="image/*" onchange="previewImage(event)">
-                    <div id="imagePreview" style="margin-top: 20px; text-align: center;">
-                        <img id="preview" src="" alt="Image Preview" style="display: none; max-height: 200px; width: auto; height: auto; margin: auto;">
-                    </div>
-                    <button onclick="detectShape()">Analyze Image</button>
-                    <p id="result"></p>
-                    <script src="app.js"></script>
-
-            </div>           
+                <p id="uploadPrompt"style="color: #fff;">Only accepts .png, .jpg, jpeg, etc.</p>
+                <input type="file" id="imageInput" accept="image/*,.svg" onchange="previewImage(event); hideUploadPrompt()">
+                <div id="imagePreview" style="margin-top: 20px; text-align: center;">
+                    <img id="preview" src="" alt="Image Preview" style="display: none; max-height: 200px; width: auto; height: auto; margin: auto;">
+                </div>
+                <button id="analyzeButton" class="tab-button analyze-button" onclick="detectShape()" style="display: none;">Analyze Image</button>
+                <p id="result"></p>
+                <script src="app.js"></script>
+            </div>
+            <script>
+                function hideUploadPrompt() {
+                    const uploadPrompt = document.getElementById('uploadPrompt');
+                    const analyzeButton = document.getElementById('analyzeButton');
+                    uploadPrompt.style.display = 'none';
+                    analyzeButton.style.display = 'block'; // Show the button
+                }
+            </script>            
             <div id="import-json" class="tab-section" style="display: none;">
                 <h2>Import JSON</h2>
                 <p>Paste your JSON data here!</p>
