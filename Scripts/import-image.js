@@ -7,6 +7,8 @@ function previewImage(event) {
         reader.onload = function(e) {
             preview.src = e.target.result;
             preview.style.display = 'block';
+            hideUploadPrompt(); // Hide the prompt now that we have an image
+            detectShape(); // Automatically call detectShape()
         }
         reader.readAsDataURL(file);
     } else {
