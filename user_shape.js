@@ -19,18 +19,17 @@ var lines = [] //has tuples of three values: The line object, and the two point 
 //this is called to create a point at the position of the mouse. It then adds a line to any subsequent points unless it is the first point ever in points.
 function savePoint(e){
     console.log("save point is being referenced")
-    console.log(":)")
+    
 
     let mouseX = e.clientX
     let mouseY = e.clientY
     const tempPoint = document.createElement('div')
-    console.log("1")
+
     tempPoint.style.top = mouseY + "px"
-    console.log("2")
+
     tempPoint.style.left = mouseX + "px"
-    console.log("3")
+
     tempPoint.style.display = 'inline-block'
-    console.log("4")
     tempPoint.paddingLeft = "5px"
     tempPoint.paddingRight = "5px"
     tempPoint.paddingTop = "5px"
@@ -39,14 +38,13 @@ function savePoint(e){
     tempPoint.position = "absolute"
     document.body.append(tempPoint)
 
-    console.log("1")
-
     if (points.length == 0){
-
+        console.log("pass over")
     }
     else addLine(tempPoint,points[points.length-1])
 
     points.push(tempPoint)
+    console.log(points)
 }
 
 //add a line between any two points
