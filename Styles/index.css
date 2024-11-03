@@ -177,4 +177,12 @@ body {
     
     overflow: hidden;
 }
+#drawing-board{
+    padding-top:100px;
+    padding-bottom:100px;
+    padding-left:100px;
+    padding-right:100px;
+    background-color: grey;
+    display:inline-block
+}
 
