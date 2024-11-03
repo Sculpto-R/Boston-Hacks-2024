@@ -8,7 +8,7 @@ import { saveAs } from 'file-saver';
 console.log("TESTING")
 const drawing_board = document.getElementById("drawing-board")
 
-console.log(drawing_board)
+console.log(drawing_board.style.zIndex)
 
 
 //add some code to link an eventListener to a button to reactivate the eventListener for  the drawing board
@@ -44,7 +44,6 @@ function savePoint(e){
     else addLine(tempPoint,points[points.length-1])
 
     points.push(tempPoint)
-    console.log(points)
 }
 
 //add a line between any two points
