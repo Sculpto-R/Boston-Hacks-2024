@@ -52,7 +52,7 @@
             <div id="import-json" class="tab-section" style="display: none;">
                 <h2>Import JSON</h2>
                 <p>Paste your JSON data here!</p>
-                <form action="/action_page.php">
+                <form onsubmit="validateJSONInput(Event)">
                     <input type="text" id="jsondata" name="json"><br><br>
                     <input type="submit" value="Submit">
                 </form>
